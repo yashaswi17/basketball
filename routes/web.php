@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\Admin\DashboardController;
  use App\Http\Controllers\Admin\BlogController;
  use App\Http\Controllers\Admin\CategoryController;
+ use App\Http\Controllers\UserController;
+ use App\Http\Controllers\LeagueController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,21 +35,37 @@ require __DIR__.'/auth.php';
 Route::get('/',[FrontController::class,'index']);
 
 Route::get('admin/dashboard',[DashboardController::class,'index']);
-Route::get('admin/dashboard',[DashboardController::class,'index']);
 
-Route::get('admin/blog/create',[BlogController::class,'index'])->name('admin.blog.create');
-Route::post('admin/blog/store',[BlogController::class,'store'])->name('admin.blog.store');
-Route::get('admin/blog/table',[BlogController::class,'table'])->name('admin.blog.table');
-Route::get('admin/blog/edit/{id}',[BlogController::class,'edit'])->name('admin.blog.edit');
-Route::post('admin/blog/update/{id}',[BlogController::class,'update'])->name('admin.blog.update');
-Route::get('admin/blog/delete/{id}',[BlogController::class,'delete'])->name('admin.blog.delete');
+Route::get('admin/blog/create',[BlogController::class,'index'])->name('admin.blog.create')->middleware('auth');
+Route::post('admin/blog/store',[BlogController::class,'store'])->name('admin.blog.store')->middleware('auth');
+Route::get('admin/blog/table',[BlogController::class,'table'])->name('admin.blog.table')->middleware('auth');
+Route::get('admin/blog/edit/{id}',[BlogController::class,'edit'])->name('admin.blog.edit')->middleware('auth');
+Route::post('admin/blog/update/{id}',[BlogController::class,'update'])->name('admin.blog.update')->middleware('auth');
+Route::get('admin/blog/delete/{id}',[BlogController::class,'delete'])->name('admin.blog.delete')->middleware('auth');
 
-Route::get('admin/category/create',[CategoryController::class,'index'])->name('admin.category.create');
-Route::post('admin/category/store',[CategoryController::class,'store'])->name('admin.category.store');
-Route::get('admin/category/table',[CategoryController::class,'table'])->name('admin.category.table');
-Route::get('admin/category/edit/{id}',[CategoryController::class,'edit'])->name('admin.category.edit');
-Route::post('admin/category/update/{id}',[CategoryController::class,'update'])->name('admin.category.update');
-Route::get('admin/category/delete/{id}',[CategoryController::class,'delete'])->name('admin.category.delete');
+Route::get('admin/category/create',[CategoryController::class,'index'])->name('admin.category.create')->middleware('auth');
+Route::post('admin/category/store',[CategoryController::class,'store'])->name('admin.category.store')->middleware('auth');
+Route::get('admin/category/table',[CategoryController::class,'table'])->name('admin.category.table')->middleware('auth');
+Route::get('admin/category/edit/{id}',[CategoryController::class,'edit'])->name('admin.category.edit')->middleware('auth');
+Route::post('admin/category/update/{id}',[CategoryController::class,'update'])->name('admin.category.update')->middleware('auth');
+Route::get('admin/category/delete/{id}',[CategoryController::class,'delete'])->name('admin.category.delete')->middleware('auth');
 
 
-Route::get('/detail/{id}',[FrontController::class,'detail'])->name('detail');
+Route::get('/detail/{id}',[FrontController::class,'detail'])->name('detail')->middleware('auth');
+
+
+// UserController
+Route::get('admin/user/create',[UserController::class,'create'])->name('admin.user.create');
+Route::post('admin/user/store',[UserController::class,'store'])->name('admin.user.store');
+Route::get('admin/user/table',[UserController::class,'index'])->name('admin.user.table');
+Route::get('admin/user/edit/{id}',[UserController::class,'edit'])->name('admin.user.edit');
+Route::post('admin/user/update/{id}',[UserController::class,'update'])->name('admin.user.update');
+Route::get('admin/user/delete/{id}',[UserController::class,'destroy'])->name('admin.user.delete');
+
+// LeagueController
+Route::get('admin/league/create',[LeagueController::class,'create'])->name('admin.league.create');
+Route::post('admin/league/store',[LeagueController::class,'store'])->name('admin.league.store');
+Route::get('admin/league/table',[LeagueController::class,'index'])->name('admin.league.table');
+Route::get('admin/league/edit/{id}',[LeagueController::class,'edit'])->name('admin.league.edit');
+Route::post('admin/league/update/{id}',[LeagueController::class,'update'])->name('admin.league.update');
+Route::get('admin/league/delete/{id}',[LeagueController::class,'destroy'])->name('admin.league.delete');

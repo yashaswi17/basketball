@@ -22,7 +22,7 @@
                         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/admin/dashboard">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{route('login')}}">Dashboard</a></li>
                     </ul>
                 </div>
             </div>

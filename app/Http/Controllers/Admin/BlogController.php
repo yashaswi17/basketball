@@ -57,8 +57,9 @@ public function table()
 public function edit($id)
 {
     $data = blog::with('category')->find($id);
-
-    return view('backend.admin.blog.edit',compact('data'));
+    $categories = Category::all();
+    // dd($data);
+    return view('backend.admin.blog.edit',compact('data','categories'));
 }
 public function update(Request $request,$id){
 

@@ -64,12 +64,16 @@
                     <input class="form-control" type="file" id="formFile" name="image">
                   </div>
                 </div>
-                <!-- <div class="form-group">
+                <div class="form-group">
     <select name="category_id" id="cars">
-        <option value="{{$data->category_id}}">{{$data->title}}</option>
+        @foreach($categories as $cat)
+        <option value="{{ $cat->id }}" {{ $cat->id == $data->category_id ? 'selected' : '' }}>{{ $cat->title }}</option>
+
+        <!-- <option value="">{{$cat->title}}</option> -->
+        @endforeach
       </select>
 
-    </div> -->
+    </div>
 
                 <!-- <div class="row mb-3">
                   <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
