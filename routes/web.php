@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\Admin\CategoryController;
  use App\Http\Controllers\UserController;
  use App\Http\Controllers\LeagueController;
+ use App\Http\Controllers\TourismController;
+
 
 
 
@@ -24,6 +26,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/temp', function () {
+    return view('backend.layouts.template');
+});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -69,3 +76,12 @@ Route::get('admin/league/table',[LeagueController::class,'index'])->name('admin.
 Route::get('admin/league/edit/{id}',[LeagueController::class,'edit'])->name('admin.league.edit');
 Route::post('admin/league/update/{id}',[LeagueController::class,'update'])->name('admin.league.update');
 Route::get('admin/league/delete/{id}',[LeagueController::class,'destroy'])->name('admin.league.delete');
+
+// TourismController
+Route::get('admin/tourism/create',[TourismController::class,'create'])->name('admin.tourism.create');
+Route::post('admin/tourism/store',[TourismController::class,'store'])->name('admin.tourism.store');
+Route::get('admin/tourism/table',[TourismController::class,'index'])->name('admin.tourism.table');
+Route::get('admin/tourism/edit/{id}',[TourismController::class,'edit'])->name('admin.tourism.edit');
+Route::post('admin/tourism/update/{id}',[TourismController::class,'update'])->name('admin.tourism.update');
+Route::get('admin/tourism/delete/{id}',[TourismController::class,'destroy'])->name('admin.tourism.delete');
+

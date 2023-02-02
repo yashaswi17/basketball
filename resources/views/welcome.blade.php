@@ -1,173 +1,380 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Blog Home - Start Bootstrap Template</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="{{('css/styles.css')}}" rel="stylesheet" />
-    </head>
-    <body>
-        <!-- Responsive navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <!-- <a class="navbar-brand" href="#!">Start Bootstrap</a> -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{route('login')}}">Dashboard</a></li>
-                    </ul>
-                </div>
+@extends('backend.layouts.template')
+
+@section('content')
+
+     <section >
+         <div id="main_slider" class="section carousel slide banner-main" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#main_slider" data-slide-to="0" class="active"></li>
+               <li data-target="#main_slider" data-slide-to="1"></li>
+               <li data-target="#main_slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-caption ">
+                              <h1>Welcome to <strong class="color">Our Shop</strong></h1>
+                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                              <a class="btn btn-lg btn-primary" href="#" role="button">Buy Now</a>
+                              <a class="btn btn-lg btn-primary" href="about.html" role="button">About </a>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box">
+                              <figure><img src="images/boksing-gloves.png" alt="img"/></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-caption ">
+                              <h1>Welcome to <strong class="color">Our Shop</strong></h1>
+                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                              <a class="btn btn-lg btn-primary" href="#" role="button">Buy Now</a>
+                              <a class="btn btn-lg btn-primary" href="about.html" role="button">About</a>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box ">
+                              <figure><img src="images/boksing-gloves.png" alt="img"/></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-caption ">
+                              <h1>Welcome to <strong class="color">Our Shop</strong></h1>
+                              <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                              <a class="btn btn-lg btn-primary" href="#" role="button">Buy Now</a>
+                              <a class="btn btn-lg btn-primary" href="about.html" role="button">About</a>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box">
+                              <figure><img src="images/boksing-gloves.png" alt="img"/></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </nav>
-        <!-- Page header with logo and tagline-->
-        <header class="py-5 bg-light border-bottom mb-4">
-            <div class="container">
-                <div class="text-center my-5">
-                    <h1 class="fw-bolder">Welcome to Blog Home!</h1>
-                    <!-- <p class="lead mb-0">A Bootstrap 5 starter layout for your next blog homepage</p> -->
-                </div>
-            </div>
-        </header>
-        <!-- Page content-->
-        <div class="container">
+            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+            <i class='fa fa-angle-left'></i></a>
+            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+            <i class='fa fa-angle-right'></i>
+            </a>
+         </div>
+      </section>
+      <!-- plant -->
+      <div id="plant" class="section  product">
+         <div class="container">
             <div class="row">
-                <!-- Blog entries-->
-                <div class="col-lg-8">
-                    <!-- Featured blog post-->
-                    <div class="card mb-4">
-                        <a href="#!"><img class="card-img-top" src="{{asset('uploads/'.$latest_blog->image)}}" alt="..." width="800px"  height="350px"/></a>
-                        <div class="card-body">
-                            <div class="small text-muted">{{$latest_blog->created_at}}</div>
-                            <h2 class="card-title">{{$latest_blog->title}}</h2>
-                            <p class="card-text">{!! Str::words($latest_blog->description ,20, '.....')!!}</p>
-                            <a class="btn btn-primary" href="{{route('detail',$latest_blog->id)}}">Read more →</a>
-                        </div>
-                    </div>
-                    <!-- Nested row for non-featured blog posts-->
-                    <div class="row">
-                    @foreach($data as $d)
-                        <div class="col-lg-6">
-                            <!-- Blog post-->
-                            <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="{{asset('uploads/'.$d->image)}}" width="700px" height="350px" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">{{$d->created_at}}</div>
-                                    <h2 class="card-title h4">{{$d->title}}</h2>
-                                    <p class="card-text">{!! Str::words($d->description ,20 ,'.....') !!}</p>
-                                    <a class="btn btn-primary" href="{{route('detail',$d->id)}}">Read more →</a>
-                                </div>
-                            </div>
-                            <!-- Blog post-->
-                            <!-- <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">January 1, 2022</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
-                                </div> -->
-                            <!-- </div> -->
-
-                        <!-- </div> -->
-                        <!-- <div class="col-lg-6"> -->
-                            <!-- Blog post-->
-                            <!-- <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">January 1, 2022</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
-                                </div> -->
-                            <!-- </div> -->
-                            <!-- Blog post-->
-                            <!-- <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
-                                <div class="card-body">
-                                    <div class="small text-muted">January 1, 2022</div>
-                                    <h2 class="card-title h4">Post Title</h2>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.</p>
-                                    <a class="btn btn-primary" href="#!">Read more →</a>
-                                </div> -->
-                            <!-- </div> -->
-                        </div>
-                        @endforeach
-                    </div>
-                    {{$data->links()}}
-                    <!-- Pagination-->
-                    <!-- <nav aria-label="Pagination">
-                        <hr class="my-0" />
-                        <ul class="pagination justify-content-center my-4">
-                            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
-                            <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#!">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#!">3</a></li>
-                            <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
-                            <li class="page-item"><a class="page-link" href="#!">15</a></li>
-                            <li class="page-item"><a class="page-link" href="#!">Older</a></li>
-                        </ul>
-                    </nav> -->
-                </div>
-                <!-- Side widgets-->
-                <div class="col-lg-4">
-                    <!-- Search widget-->
-                    <div class="card mb-4">
-                        <div class="card-header">Search</div>
-                        <div class="card-body">
-                            <div class="input-group">
-                                <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
-                                <button class="btn btn-primary" id="button-search" type="button">Go!</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Categories widget-->
-                    <div class="card mb-4">
-                        <div class="card-header">Categories</div>
-                        <div class="card-body">
-                            <div class="row">
-                            @foreach($categories as $c)
-
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">{{$c->title}}</a></li>
-                                        <!-- <li><a href="#!">HTML</a></li> -->
-                                        <!-- <li><a href="#!">Freebies</a></li> -->
-                                    </ul>
-                                </div>
-                                @endforeach
-                                <!-- <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">JavaScript</a></li>
-                                        <li><a href="#!">CSS</a></li>
-                                        <li><a href="#!">Tutorials</a></li>
-                                    </ul>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Side widget-->
-                    <!-- <div class="card mb-4">
-                        <div class="card-header">Side Widget</div>
-                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
-                    </div> -->
-                </div>
+               <div class="col-md-12 ">
+                  <div class="titlepage">
+                     <h2><strong class="black"> Our</strong>  Products</h2>
+                     <span>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believable</span>
+                  </div>
+               </div>
             </div>
-        </div>
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white"> @KajalUparkar 2022</p></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="{{asset('uploads/'.$d->image)}}"></script>
-        <!-- Core theme JS-->
-        <script src="{{asset('js/scripts.js')}}"></script>
-    </body>
-</html>
+         </div>
+      </div>
+         <div class="clothes_main section ">
+          <div class="container">
+            <div class="row">
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                  <div class="sport_product">
+                     <figure><img src="images/basketball.png" alt="img"/></figure>
+                    <h3> $<strong class="price_text">50</strong></h3>
+                     <h4>basket ball</h4>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
+                  <div class="sport_product">
+                     <figure><img src="images/t-shirt.png" alt="img"/ ></figure>
+                    <h3> $<strong class="price_text">50</strong></h3>
+                     <h4> T-Shirt</h4>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
+                  <div class="sport_product">
+                     <figure><img src="images/game.png" alt="img"/></figure>
+                     <h3> $<strong class="price_text">50</strong></h3>
+                     <h4>Game</h4>
+                  </div>
+               </div>
+
+
+
+
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                  <div class="sport_product">
+                     <figure><img src="images/basketball.png" alt="img"/"></figure>
+                   <h3> $<strong class="price_text">50</strong></h3>
+                     <h4>basket ball</h4>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
+                  <div class="sport_product">
+                     <figure><img src="images/t-shirt.png" alt="img"/"></figure>
+                    <h3> $<strong class="price_text">50</strong></h3>
+                     <h4>T-Shirt</h4>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 ">
+                  <div class="sport_product">
+                     <figure><img src="images/game.png" alt="img"/"></figure>
+                    <h3> $<strong class="price_text">50</strong></h3>
+                     <h4>Game</h4>
+                  </div>
+               </div>
+             </div>
+            </div>
+           </div>
+      </div>
+      <!-- end plant -->
+      <!--about -->
+      <div class="section about ">
+         <div class="container">
+             <div class="row">
+                <div class="col-12">
+                    <div class="titlepage">
+                     <h2><strong class="black"> About</strong>  Us</h2>
+                     <span>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believable</span>
+                  </div>
+                </div>
+             </div>
+         </div>
+      </div>
+
+
+
+      <section >
+         <div id="main_slider" class="section carousel slide banner-main" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#main_slider" data-slide-to="0" class="active"></li>
+               <li data-target="#main_slider" data-slide-to="1"></li>
+               <li data-target="#main_slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-sporrt_text ">
+                              <h1 class="sporrt_text">Best sports item shop our</h1>
+                              <p  class="lorem_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believableThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believable</p>
+                              <div class="btn_main">
+                                 <a class="btn btn-lg btn-primary" href="#" role="button">Read More</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box">
+                              <figure><img src="images/child-image.png" style="max-width: 100%; border: 15px solid #fff;"/></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-sporrt_text ">
+                              <h1 class="sporrt_text">Best sports item shop our</h1>
+                              <p  class="lorem_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believableThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believable</p>
+                              <div class="btn_main">
+                                 <a class="btn btn-lg btn-primary" href="#" role="button">Read More</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box ">
+                              <figure><img src="images/child-image.png" style="max-width: 100%; border: 15px solid #fff;"/></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="row marginii">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="carousel-sporrt_text ">
+                              <h1 class="sporrt_text">Best sports item shop our</h1>
+                              <p  class="lorem_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believableThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believable</p>
+                              <div class="btn_main">
+                                 <a class="btn btn-lg btn-primary" href="#" role="button">Read More</a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="img-box">
+                              <figure><img src="images/child-image.png" style="max-width: 100%; border: 15px solid #fff;"/></figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      </div>
+      <!-- end about -->
+      <!--Our  Clients -->
+      <div id="plant" class="section_Clients layout_padding padding_bottom_0">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 ">
+                  <div class="titlepage">
+                     <h2> Testmonial</h2>
+                     <span style="text-align: center;">available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believable</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+            <div class="section Clients_2 layout_padding padding-top_0">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-sm-12">
+
+                        <div id="testimonial" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#testimonial" data-slide-to="0" class="active"></li>
+    <li data-target="#testimonial" data-slide-to="1"></li>
+    <li data-target="#testimonial" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="titlepage">
+                           <div class="john">
+                              <div class="john_image"><img src="images/john-image.png" style="max-width: 100%;"></div>
+                              <div class="john_text">JOHN DUE<span style="color: #fffcf4;">(ceo)</span></div>
+                              <p class="lorem_ipsum_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+                              <div class="icon_image"><img src="images/icon-1.png"></div>
+                           </div>
+                        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="titlepage">
+                           <div class="john">
+                              <div class="john_image"><img src="images/john-image.png" style="max-width: 100%;"></div>
+                              <div class="john_text">JOHN DUE<span style="color: #fffcf4;">(ceo)</span></div>
+                              <p class="lorem_ipsum_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+                              <div class="icon_image"><img src="images/icon-1.png"></div>
+                           </div>
+                        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="titlepage">
+                           <div class="john">
+                              <div class="john_image"><img src="images/john-image.png" style="max-width: 100%;"></div>
+                              <div class="john_text">JOHN DUE<span style="color: #fffcf4;">(ceo)</span></div>
+                              <p class="lorem_ipsum_text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, asIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as </p>
+                              <div class="icon_image"><img src="images/icon-1.png"></div>
+                           </div>
+                        </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#testimonial" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#testimonial" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+      <!-- end Our  Clients -->
+      <!-- start Contact Us-->
+
+      <div id="plant" class="contact_us layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 ">
+                  <div class="titlepage">
+                    <h2><strong class="black"> Contact</strong>  Us</h2>
+                     <span style="text-align: center;">available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believable</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="contact_us_2 layout_padding paddind_bottom_0">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="soc_text">soC</div>
+               </div>
+               <div class="col-md-6">
+                  <div class="email_btn">
+                     <form action="/action_page.php">
+                        <div class="form-group">
+                           <input type="text" class="form-control form-control-sm" placeholder="Name" name="Name">
+                        </div>
+                        <div class="form-group">
+                           <input  type="text" class="form-control form-control-sm" placeholder="Email" name="Email">
+                        </div>
+                        <div class="form-group">
+                           <input  type="text" class="form-control form-control-sm" placeholder="Phone" name="Phone">
+                        </div>
+                        <div class="form-group">
+                           <input  type="text" class="form-control form-control-sm" placeholder="Massage" name="text3">
+                        </div>
+                         <div class="submit_btn">
+                            <button type="submit" class="btn btn-primary" style="background: #081b30; color: #fff; padding: 11px;">Send</button>
+                         </div>
+                      </form>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="contact_us_3 layout_padding">
+            <div class="row">
+               <div class="col-md-4">
+                  <h1 style="color: #ffffff; ">Newsletter</h1>
+                  <p class="long_text">It is a long established fact that a reader will be distracted  a</p>
+               </div>
+               <div class="col-md-8">
+                  <div class="email_text">
+                     <div class="input-group mb-3">
+                        <input style="border-bottom-left-radius: 20px !important; border-top-left-radius: 20px !important;" type="text" class="form-control" placeholder="Enter your email">
+                     <div class="input-group-append">
+                        <button style="border-top-right-radius: 20px !important; border-bottom-right-radius: 20px !important; color: #fff; padding-bottom: 10px; padding-top: 10px;" class="btn btn-primary" type="Subscribe">Subscribe</button>
+                     </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+            </div>
+         </div>
+      </div>
+
+      @endsection
+

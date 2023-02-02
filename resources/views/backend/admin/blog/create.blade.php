@@ -8,11 +8,11 @@
       <h1>Blog Elements</h1>
                         <!-- validation error -->
     @if($errors->any())
-<ul>
+    <ul>
     @foreach($errors->all() as $error)
     <li>{{$error}}</li>
     @endforeach
-</ul>
+   </ul>
 @endif
 
       <nav>

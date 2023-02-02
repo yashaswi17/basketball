@@ -7,7 +7,7 @@
 <div class="pagetitle">
   <h1> General Blog Tables</h1>
   @if(session()->has('msg'))
-    <div class="alert alert-success">
+    <div class="alert alert-success" class="close"  >
         {{ session()->get('msg') }}
     </div>
 @endif
