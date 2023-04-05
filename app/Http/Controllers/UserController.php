@@ -53,7 +53,7 @@ class UserController extends Controller
         $user->password = bcrypt($request->password);
         $user->roles = $request->roles;
         $user->Save();
-        return redirect()->route('admin.user.table')->with('msg' , "Data Added Successfully !");
+        return redirect()->route('admin.user.table')->with('message' , "Data Added Successfully !");
     }
 
     /**
@@ -106,7 +106,7 @@ class UserController extends Controller
         $user->password = bcrypt($request->password);
         $user->roles = $request->roles;
         $user->Save();
-        return redirect()->route('admin.user.table')->with('msg' , "Data Updated Successfully !");
+        return redirect()->route('admin.user.table')->with('message' , "Data Updated Successfully !");
     }
 
     /**
@@ -119,6 +119,6 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->delete();
-        return redirect()->route('admin.user.table')->with('msg' , "Data Deleted Successfully !");
+        return redirect()->route('admin.user.table')->with('message' , "Data Deleted Successfully !");
     }
 }

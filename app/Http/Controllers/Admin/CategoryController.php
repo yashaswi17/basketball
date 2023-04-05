@@ -25,7 +25,7 @@ class CategoryController extends Controller
         $data = new Category();
         $data->title = $request->title;
         $data->save();
-        return redirect()->route('admin.category.table')->with('msg' , "Data Added Successfully !");
+        return redirect()->route('admin.category.table')->with('message' , "Data Added Successfully !");
 
     }
     public function table()
@@ -48,14 +48,14 @@ class CategoryController extends Controller
                         $data = Category::find($id);
                         $data->title = $request->title;
                         $data->save();
-                        return redirect()->route('admin.category.table')->with('msg' , "Data Updated Successfully !");
+                        return redirect()->route('admin.category.table')->with('message' , "Data Updated Successfully !");
 
     }
         public function delete($id)
         {
             $data=Category::find($id);
             $data->delete();
-            return redirect()->route('admin.category.table')->with('msg' , "Data Deleted Successfully !");
+            return redirect()->route('admin.category.table')->with('message' , "Data Deleted Successfully !");
 
         }
 

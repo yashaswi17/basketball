@@ -217,7 +217,7 @@
                 <!-- <i class="right fas fa-angle-left"></i> -->
               </p>
             </a>
-            
+
           </li>
           <li class="nav-item">
             <a href="{{url('admin/blog/table')}}" class="nav-link">
@@ -260,14 +260,22 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="" class="nav-link">
+              <i class="nav-icon fas fa-image "></i>
+              <p>
+                Meetings
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('logout')}}" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
               <p>
                 Logout
               </p>
             </a>
           </li>
-         
+
           <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
@@ -830,7 +838,7 @@
 
     <!-- Main content -->
     @yield('content')
-   
+
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->

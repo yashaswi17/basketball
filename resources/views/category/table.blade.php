@@ -5,12 +5,12 @@
 <main id="main" class="main">
 
 <div class="pagetitle">
-  <h1> General Category Tables</h1>
+  {{-- <h1> General Category Tables</h1>
   @if(session()->has('msg'))
     <div class="alert alert-success">
         {{ session()->get('msg') }}
     </div>
-@endif
+@endif --}}
 
   <nav>
     <ol class="breadcrumb">
@@ -22,20 +22,29 @@
 </div><!-- End Page Title -->
 
 <div class="col-md-12">
+    @if(session()->has('message'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{ session()->get('message') }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+@endif
             <div class="card">
               <div class="card-header">
               <h3 class="card-title">Bordered Table</h3>
 
                 <div class="text-right">
                 <a href="{{route('admin.category.create')}}"><button class="btn btn-success">Add</button></a>
-                </div> 
+                </div>
 
 
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table class="table table-bordered">
-                
+
             <thead>
               <tr>
                 <th scope="col">ID</th>
@@ -59,7 +68,7 @@
               @endforeach
             </tbody>
           </table>
-                
+
               </div>
               <!-- /.card-body -->
               <!-- <div class="card-footer clearfix">
@@ -74,8 +83,8 @@
             </div>
             <!-- /.card -->
 
-            
-          
+
+
           </div>
 
 

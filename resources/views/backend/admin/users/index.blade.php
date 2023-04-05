@@ -7,11 +7,11 @@
 <div class="pagetitle">
 
 <h1> General User Tables</h1>
-  @if(session()->has('msg'))
+  {{-- @if(session()->has('msg'))
     <div class="alert alert-success">
         {{ session()->get('msg') }}
     </div>
-@endif
+@endif --}}
 
   <nav>
     <ol class="breadcrumb">
@@ -25,13 +25,22 @@
 
 </main><!-- End #main -->
 <div class="col-md-12">
+    @if(session()->has('message'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{ session()->get('message') }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+    @endif
             <div class="card">
               <div class="card-header">
               <h3 class="card-title">Users Table</h3>
 
                 <div class="text-right">
                 <a href="{{route('admin.user.create')}}"><button class="btn btn-success">Add</button></a>
-                </div> 
+                </div>
 
 
               </div>
@@ -80,8 +89,8 @@
             </div>
             <!-- /.card -->
 
-            
-          
+
+
           </div>
 
 

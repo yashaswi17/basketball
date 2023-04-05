@@ -58,7 +58,7 @@ class LeagueController extends Controller
         $lead->date = $request->date;
         $lead->place = $request->place;
         $lead->Save();
-        return redirect()->route('admin.league.table')->with('msg', "Data Added Successfully !");
+        return redirect()->route('admin.league.table')->with('message', "Data Added Successfully !");
 
     }
 
@@ -119,7 +119,7 @@ class LeagueController extends Controller
         $lead->date = $request->date;
         $lead->place = $request->place;
         $lead->Save();
-        return redirect()->route('admin.league.table')->with('msg', "Data Updated Successfully !");
+        return redirect()->route('admin.league.table')->with('message', "Data Updated Successfully !");
     }
 
 
@@ -134,6 +134,6 @@ class LeagueController extends Controller
     {
         $user = League::find($id);
         $user->delete();
-        return redirect()->route('admin.league.table')->with('msg', "Data Deleted Successfully !");
+        return redirect()->route('admin.league.table')->with('message', "Data Deleted Successfully !");
     }
 }

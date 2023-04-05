@@ -62,7 +62,7 @@ class TourismController extends Controller
                 }
 
                 $tour->Save();
-                return redirect()->route('admin.tourism.table')->with('msg', "Data Added Successfully !");
+                return redirect()->route('admin.tourism.table')->with('message', "Data Added Successfully !");
 
 
     }
@@ -126,7 +126,7 @@ class TourismController extends Controller
                         }
 
                         $tour->Save();
-                        return redirect()->route('admin.tourism.table')->with('msg', "Data Added Successfully !");
+                        return redirect()->route('admin.tourism.table')->with('message', "Data Added Successfully !");
 
 
 
@@ -142,7 +142,7 @@ class TourismController extends Controller
     {
         $user = Tourism::find($id);
         $user->delete();
-        return redirect()->route('admin.tourism.table')->with('msg', "Data Deleted Successfully !");
+        return redirect()->route('admin.tourism.table')->with('message', "Data Deleted Successfully !");
 
     }
 }

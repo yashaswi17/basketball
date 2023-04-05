@@ -5,13 +5,13 @@
     <div class="pagetitle">
         <h1>League Elements</h1>
         <!-- validation error -->
-        @if($errors->any())
+        {{-- @if($errors->any())
         <ul>
             @foreach($errors->all() as $error)
             <li>{{$error}}</li>
             @endforeach
         </ul>
-        @endif
+        @endif --}}
 
 
         <nav>
@@ -25,6 +25,15 @@
 
     <section class="content">
       <div class="container-fluid">
+        @if (count($errors) > 0)
+        <div class="alert alert-danger">
+          <ul>
+              @foreach($errors->all() as $error)
+              <li>{{$error}}</li>
+              @endforeach
+          </ul>
+        </div>
+        @endif
         <div class="row">
           <!-- left column -->
           <div class="col-md-12">
@@ -75,7 +84,7 @@
                         <span class="input-group-text">Upload</span>
                       </div>
                     </div>
-                  
+
                             <br>
                             <div class="col-sm-10">
                                 <button type="submit" class="btn btn-primary">Submit</button>

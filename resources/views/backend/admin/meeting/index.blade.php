@@ -6,7 +6,7 @@
 
 <div class="pagetitle">
 
-<h1> General Tournament Tables</h1>
+<h1> General Meeting Tables</h1>
   {{-- @if(session()->has('msg'))
     <div class="alert alert-success">
         {{ session()->get('msg') }}
@@ -17,14 +17,16 @@
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="index.html">Home</a></li>
       <li class="breadcrumb-item">Tables</li>
-      <li class="breadcrumb-item active">Tournament</li>
+      <li class="breadcrumb-item active">Meeting</li>
     </ol>
   </nav>
 </div><!-- End Page Title -->
 
 
+
 <div class="col-md-12">
-    @if(session()->has('message'))
+    <div class="col-12">
+        @if(session()->has('message'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>{{ session()->get('message') }}</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -35,46 +37,45 @@
     @endif
             <div class="card">
               <div class="card-header">
-              <h5 class="card-title">Tournament Table</h5>
+              <h3 class="card-title">Meeting Table</h3>
 
                 <div class="text-right">
-                <a href="{{route('admin.tourism.create')}}"><button class="btn btn-success">Add</button></a>
+                <a href="{{route('admin.meeting.create')}}"><button class="btn btn-success">Add</button></a>
                 </div>
 
 
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-              <table class="table table-bordered">
+              <table class="table">
             <thead>
               <tr>
                 <th scope="col">ID</th>
+                {{-- <th scope="col">Name</th> --}}
                 <th scope="col">Title</th>
-                <th scope="col">Start Date</th>
-                <th scope="col">End Date</th>
+                <th scope="col">Description</th>
+                <th scope="col">Date</th>
                 <th scope="col">Place</th>
-                <th scope="col">Image</th>
                 <th scope="col">Actions</th>
               </tr>
             </thead>
             <tbody>
-                @foreach($tours as $tour)
+                @foreach($leads as $lead)
               <tr>
-                <td>{{$tour->id}}</td>
-                <td>{{$tour->title}}</td>
-                <td>{{$tour->sdate}}</td>
-                <td>{{$tour->edate}}</td>
-                <td>{{$tour->place}}</td>
-                <td> <img src="{{asset('uploads/'.$tour->image)}}" width="50px"  height="50px"></td>
+                <td>{{$lead->id}}</td>
+                <td>{{$lead->title}}</td>
+                <td>{{$lead->description}}</td>
+                <td>{{$lead->date}}</td>
+                <td>{{$lead->place}}</td>
             <td>
-                <a href="{{route('admin.tourism.edit',$tour->id)}}"> <button type="button" class="btn btn-info">Edit</button></a>
-               <a href="{{route('admin.tourism.delete',$tour->id)}}"> <button type="button" class="btn btn-danger">Delete</button></a>
+                <a href="{{route('admin.meeting.edit',$lead->id)}}"> <button type="button" class="btn btn-info">Edit</button></a>
+               <a href="{{route('admin.meeting.delete',$lead->id)}}"> <button type="button" class="btn btn-danger">Delete</button></a>
             </td>
               </tr>
               @endforeach
             </tbody>
           </table>
-          {{$tours->links()}}
+          {{$leads->links()}}
               </div>
               <!-- /.card-body -->
               <!-- <div class="card-footer clearfix">
@@ -92,11 +93,8 @@
 
 
           </div>
+          </main><!-- End #main -->
 
-
-
-
-</main><!-- End #main -->
 
 @endsection
 

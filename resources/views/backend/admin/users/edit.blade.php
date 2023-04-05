@@ -5,13 +5,13 @@
     <div class="pagetitle">
         <h1>Users Elements</h1>
         <!-- validation error -->
-        @if($errors->any())
+        {{-- @if($errors->any())
         <ul>
             @foreach($errors->all() as $error)
             <li>{{$error}}</li>
             @endforeach
         </ul>
-        @endif
+        @endif --}}
 
         <nav>
             <ol class="breadcrumb">
@@ -24,6 +24,15 @@
 
     <section class="content">
       <div class="container-fluid">
+        @if (count($errors) > 0)
+        <div class="alert alert-danger">
+          <ul>
+              @foreach($errors->all() as $error)
+              <li>{{$error}}</li>
+              @endforeach
+          </ul>
+        </div>
+        @endif
         <div class="row">
           <!-- left column -->
           <div class="col-md-12">
@@ -38,7 +47,7 @@
                             @csrf
                             <div class="card-body">
                             <div class="form-group">
-                            
+
                                 <label for="fname"><b>First Name:-<b></label>
                                 <!-- <div class="col-sm-10"> -->
                                     <input type="text" class="form-control" name="fname" id="fname" value="{{$user->fname}}">

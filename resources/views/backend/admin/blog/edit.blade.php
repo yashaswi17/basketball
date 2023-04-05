@@ -26,6 +26,15 @@
 
     <section class="content">
       <div class="container-fluid">
+        @if (count($errors) > 0)
+        <div class="alert alert-danger">
+          <ul>
+              @foreach($errors->all() as $error)
+              <li>{{$error}}</li>
+              @endforeach
+          </ul>
+        </div>
+        @endif
         <div class="row">
           <!-- left column -->
           <div class="col-md-12">
@@ -86,7 +95,7 @@
 
     </div>
 
-          
+
                 <!-- <div class="row mb-3"> -->
                   <!-- <label class="col-sm-2 col-form-label">Submit Button</label> -->
                   <div class="col-sm-10">
@@ -115,12 +124,12 @@
 
   </main>
 
-   
+
 
     </div>
     <br>
 
-              
+
                 <!-- <div class=""> -->
                   <!-- <label class="col-sm-2 col-form-label">Submit Button</label> -->
                   <div class="col-sm-10">

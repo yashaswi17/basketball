@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\UserController;
  use App\Http\Controllers\LeagueController;
  use App\Http\Controllers\TourismController;
+ use App\Http\Controllers\MeetingController;
 
 
 
@@ -84,3 +85,9 @@ Route::get('admin/tourism/edit/{id}',[TourismController::class,'edit'])->name('a
 Route::post('admin/tourism/update/{id}',[TourismController::class,'update'])->name('admin.tourism.update');
 Route::get('admin/tourism/delete/{id}',[TourismController::class,'destroy'])->name('admin.tourism.delete');
 
+Route::get('admin/meeting/create',[MeetingController::class,'create'])->name('admin.meeting.create');
+Route::get('admin/meeting/table',[MeetingController::class,'table'])->name('admin.meeting.table');
+Route::post('admin/meeting/store',[MeetingController::class,'store'])->name('admin.meeting.store');
+Route::get('admin/meeting/edit/{id}',[MeetingController::class,'edit'])->name('admin.meeting.edit');
+Route::post('admin/meeting/update/{id}',[MeetingController::class,'update'])->name('admin.meeting.update');
+Route::get('admin/meeting/delete/{id}',[MeetingController::class,'delete'])->name('admin.meeting.delete');

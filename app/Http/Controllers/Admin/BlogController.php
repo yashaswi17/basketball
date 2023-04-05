@@ -45,7 +45,7 @@ $data->image=$filename;
 }
 
 $data->save();
-return redirect()->route('admin.blog.table')->with('msg' , "Data Updated Successfully !");
+return redirect()->route('admin.blog.table')->with('message' , "Data Updated Successfully !");
 
 
 }
@@ -87,13 +87,13 @@ $data->image=$filename;
 
 // dd($data);
 $data->save();
-return redirect()->route('admin.blog.table')->with('msg' , "Data Updated Successfully !");
+return redirect()->route('admin.blog.table')->with('message' , "Data Updated Successfully !");
 }
 public function delete($id)
 {
     $data = Blog::find($id);
     $data->delete();
-    return redirect()->route('admin.blog.table')->with('msg' , "Data Deleted Successfully !");
+    return redirect()->route('admin.blog.table')->with('message' , "Data Deleted Successfully !");
 
 }
 

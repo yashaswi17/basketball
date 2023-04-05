@@ -17,6 +17,15 @@
 
     <section class="content">
       <div class="container-fluid">
+        @if (count($errors) > 0)
+        <div class="alert alert-danger">
+          <ul>
+              @foreach($errors->all() as $error)
+              <li>{{$error}}</li>
+              @endforeach
+          </ul>
+        </div>
+        @endif
         <div class="row">
           <!-- left column -->
           <div class="col-md-12">
@@ -38,17 +47,17 @@
 
 <form action="{{route('admin.category.update',$data->id)}}" method="POST">
                 @csrf
-                
+
                 <div class="card-body">
                 <div class="form-group">
-                
+
                 <div class="row mb-3">
                 <label for="title"><b>Title:-</b></label>
-                  
+
                     <input type="text" class="form-control" name="title" id="title" value="{{$data->title}}">
-                  
+
                 </div>
-              
+
                 <!-- <div class="row mb-3"> -->
                   <!-- <label class="col-sm-2 col-form-label">Submit Button</label> -->
                   <div class="col-sm-10">
@@ -67,7 +76,7 @@
 
       </div>
     </section>
-   
+
 
   </main>
 @endsection
