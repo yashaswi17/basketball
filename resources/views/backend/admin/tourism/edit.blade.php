@@ -23,53 +23,64 @@
         </nav>
     </div><!-- End Page Title -->
 
-    <section class="section">
+    <section class="content">
+      <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-15">
-
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Tournament Form</h5>
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+              <h5 class="card-title">Tournament Form</h5>
+              </div>
 
                         <!-- General Form Elements -->
                         <form action="{{route('admin.tourism.update',$tour->id)}}" method="POST" enctype="multipart/form-data">
                             @csrf
+                            <div class="card-body">
                             <div class="form-group">
                                 <label for="name"><b>Title:-<b></label>
-                                <div class="col-sm-10">
+                                <!-- <div class="col-sm-10"> -->
                                     <input type="text" class="form-control" name="title" id="title" value="{{$tour->title}}">
-                                </div>
+                                <!-- </div> -->
                             </div>
 
                             <div class="form-group">
                                 <label for="name"><b>Start Date:-<b></label>
-                                <div class="col-sm-10">
+                                <!-- <div class="col-sm-10"> -->
                                     <input type="date" class="form-control" name="sdate" id="s-date" value="{{$tour->sdate}}">
-                                </div>
+                                <!-- </div> -->
                             </div>
                             <div class="form-group">
                                 <label for="name"><b>End Date:-<b></label>
-                                <div class="col-sm-10">
+                                <!-- <div class="col-sm-10"> -->
                                     <input type="date" class="form-control" name="edate" id="e-date" value="{{$tour->edate}}">
-                                </div>
+                                <!-- </div> -->
                             </div>
                             <div class="form-group">
                                 <label for="name"><b>Place:-<b></label>
-                                <div class="col-sm-10">
+                                <!-- <div class="col-sm-10"> -->
                                     <input type="text" class="form-control" name="place" id="place" value="{{$tour->place}}">
-                                </div>
+                                <!-- </div> -->
                             </div>
 
                             <div class="form-group">
-                                <label for="image"><b>Image:-<b></label>
-                                <div class="col-sm-10">
-                                    <input class="form-control" type="file" id="formFile" name="image">
-                                </div>
-                            </div>
+                    <label for="exampleInputFile">Image</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" name="image" class="custom-file-input" id="exampleInputFile">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text">Upload</span>
+                      </div>
+                    </div>
+                  
                             <br>
                             <div class="col-sm-10">
                                 <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
+                                </div>
+                                </div>
                         </form><!-- End General Form Elements -->
                     </div>
                 </div>

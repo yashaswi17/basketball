@@ -22,45 +22,56 @@
         </nav>
     </div><!-- End Page Title -->
 
-    <section class="section">
+    <section class="content">
+      <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-15">
-
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">League Form</h5>
+          <!-- left column -->
+          <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Edit League form</h3>
+              </div>
 
                         <!-- General Form Elements -->
                         <form action="{{route('admin.league.update',$lead->id)}}" method="POST"   enctype="multipart/form-data">
                             @csrf
+                            <div class="card-body"> 
                             <div class="form-group">
                                 <label for="name"><b>Name:-<b></label>
-                                <div class="col-sm-10">
+                                <!-- <div class="col-sm-10"> -->
                                     <input type="text" class="form-control" name="name" id="name" value="{{$lead->name}}">
-                                </div>
+                                <!-- </div> -->
                             </div>
                             <div class="form-group">
-                                <label for="image"><b>Image:-<b></label>
-                                <div class="col-sm-10">
-                                    <input class="form-control" type="file" id="formFile" name="image">
-                                </div>
-                            </div>
+                    <label for="exampleInputFile">Image</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" name="image" class="custom-file-input" id="exampleInputFile" value="{{$lead->image}}">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text">Upload</span>
+                      </div>
+                    </div>
+                 
                             <div class="form-group">
                                 <label for="date"><b>Date:-<b></label>
-                                <div class="col-sm-10">
+                                <!-- <div class="col-sm-10"> -->
                                     <input type="date" class="form-control" name="date" id="date" value="{{$lead->date}}">
-                                </div>
+                                <!-- </div> -->
                             </div>
                             <div class="form-group">
                                 <label for="place"><b>Place:-<b></label>
-                                <div class="col-sm-10">
+                                <!-- <div class="col-sm-10"> -->
                                     <input type="text" class="form-control" name="place" id="place" value="{{$lead->place}}">
-                                </div>
+                                <!-- </div> -->
                             </div>
                             <br>
                             <div class="col-sm-10">
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
+                        </div>
                         </form><!-- End General Form Elements -->
                     </div>
                 </div>

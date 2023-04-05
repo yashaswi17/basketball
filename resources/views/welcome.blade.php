@@ -149,7 +149,7 @@
                 <div class="col-12">
                     <div class="titlepage">
                      <h2><strong class="black"> About</strong>  Us</h2>
-                     <span>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected randomised words which don't look even slightly believable</span>
+                     <span>A Mobile freindly application that can handle team,league,club management needs</span>
                   </div>
                 </div>
              </div>

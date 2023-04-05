@@ -22,18 +22,21 @@
   </nav>
 </div><!-- End Page Title -->
 
-<section class="section">
-  <div class="row">
-    <div class="col-lg-30">
 
-      <div class="card lg-5">
-        <div class="card-body">
-          <h5 class="card-title">Tournament Table</h5>
+<div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+              <h5 class="card-title">Tournament Table</h5>
 
-          <!-- Default Table -->
-          <a href="{{route('admin.tourism.create')}}"><button class="btn btn-success">Add</button></a>
+                <div class="text-right">
+                <a href="{{route('admin.tourism.create')}}"><button class="btn btn-success">Add</button></a>
+                </div> 
 
-          <table class="table">
+
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+              <table class="table table-bordered">
             <thead>
               <tr>
                 <th scope="col">ID</th>
@@ -63,11 +66,26 @@
             </tbody>
           </table>
           {{$tours->links()}}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+              </div>
+              <!-- /.card-body -->
+              <!-- <div class="card-footer clearfix">
+                <ul class="pagination pagination-sm m-0 float-right">
+                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+              </div> -->
+            </div>
+            <!-- /.card -->
+
+            
+          
+          </div>
+
+
+
 
 </main><!-- End #main -->
 

@@ -22,18 +22,22 @@
   </nav>
 </div><!-- End Page Title -->
 
-<section class="section">
-  <div class="row">
-    <div class="col-lg-30">
 
-      <div class="card lg-5">
-        <div class="card-body">
-          <h5 class="card-title">League Table</h5>
 
-          <!-- Default Table -->
-          <a href="{{route('admin.league.create')}}"><button class="btn btn-success">Add</button></a>
+<div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+              <h3 class="card-title">League Table</h3>
 
-          <table class="table">
+                <div class="text-right">
+                <a href="{{route('admin.league.create')}}"><button class="btn btn-success">Add</button></a>
+                </div> 
+
+
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+              <table class="table">
             <thead>
               <tr>
                 <th scope="col">ID</th>
@@ -61,13 +65,25 @@
             </tbody>
           </table>
           {{$leads->links()}}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+              </div>
+              <!-- /.card-body -->
+              <!-- <div class="card-footer clearfix">
+                <ul class="pagination pagination-sm m-0 float-right">
+                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+              </div> -->
+            </div>
+            <!-- /.card -->
 
-</main><!-- End #main -->
+            
+          
+          </div>
+          </main><!-- End #main -->
+
 
 @endsection
 

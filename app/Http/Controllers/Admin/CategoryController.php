@@ -30,7 +30,7 @@ class CategoryController extends Controller
     }
     public function table()
     {
-        $data=Category::paginate(3);
+        $data=Category::all();
         return view('category.table',compact ('data'));
     }
     public function edit($id)

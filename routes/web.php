@@ -49,7 +49,6 @@ Route::get('admin/blog/table',[BlogController::class,'table'])->name('admin.blog
 Route::get('admin/blog/edit/{id}',[BlogController::class,'edit'])->name('admin.blog.edit')->middleware('auth');
 Route::post('admin/blog/update/{id}',[BlogController::class,'update'])->name('admin.blog.update')->middleware('auth');
 Route::get('admin/blog/delete/{id}',[BlogController::class,'delete'])->name('admin.blog.delete')->middleware('auth');
-
 Route::get('admin/category/create',[CategoryController::class,'index'])->name('admin.category.create')->middleware('auth');
 Route::post('admin/category/store',[CategoryController::class,'store'])->name('admin.category.store')->middleware('auth');
 Route::get('admin/category/table',[CategoryController::class,'table'])->name('admin.category.table')->middleware('auth');
