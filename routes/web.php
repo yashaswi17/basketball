@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\LeagueController;
  use App\Http\Controllers\TourismController;
  use App\Http\Controllers\MeetingController;
+ use App\Http\Controllers\EventController;
 
 
 
@@ -91,3 +92,10 @@ Route::post('admin/meeting/store',[MeetingController::class,'store'])->name('adm
 Route::get('admin/meeting/edit/{id}',[MeetingController::class,'edit'])->name('admin.meeting.edit');
 Route::post('admin/meeting/update/{id}',[MeetingController::class,'update'])->name('admin.meeting.update');
 Route::get('admin/meeting/delete/{id}',[MeetingController::class,'delete'])->name('admin.meeting.delete');
+
+Route::get('admin/event/create',[eventController::class,'create'])->name('admin.event.create');
+Route::get('admin/event/table',[eventController::class,'table'])->name('admin.event.table');
+Route::post('admin/event/store',[eventController::class,'store'])->name('admin.event.store');
+Route::get('admin/event/edit/{id}',[eventController::class,'edit'])->name('admin.event.edit');
+Route::post('admin/event/update/{id}',[eventController::class,'update'])->name('admin.event.update');
+Route::get('admin/event/delete/{id}',[eventController::class,'delete'])->name('admin.event.delete');

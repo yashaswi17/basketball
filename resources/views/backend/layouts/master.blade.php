@@ -268,6 +268,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{url('admin/event/table')}}" class="nav-link">
+              <i class="nav-icon fas fa-mobile"></i>
+              <p>
+                Event
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{route('logout')}}" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
               <p>
