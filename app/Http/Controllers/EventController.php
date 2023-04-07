@@ -79,7 +79,7 @@ class EventController extends Controller
         $lead->date = $request->date;
         $lead->place = $request->place;
         $lead->Save();
-        return redirect()->route('admin.event.table')->with('message', "Data Added Successfully !");
+        return redirect()->route('admin.event.table')->with('message', "Data updated Successfully !");
 
     }
 
@@ -87,7 +87,7 @@ class EventController extends Controller
     {
         $leads=Event::find($id);
         $leads->delete();
-        return redirect()->route('admin.event.table')->with('message', "Data Added Successfully !");
+        return redirect()->route('admin.event.table')->with('message', "Data deleted Successfully !");
 
     }
 

@@ -60,14 +60,14 @@ class MeetingController extends Controller
         $lead->date = $request->date;
         $lead->place = $request->place;
         $lead->Save();
-        return redirect()->route('admin.meeting.table')->with('message', "Data Added Successfully !");
+        return redirect()->route('admin.meeting.table')->with('message', "Data updated Successfully !");
 
     }
     public function delete($id)
     {
         $leads=Meeting::find($id);
         $leads->delete();
-        return redirect()->route('admin.meeting.table')->with('message', "Data Added Successfully !");
+        return redirect()->route('admin.meeting.table')->with('message', "Data deleted Successfully !");
 
     }
 }

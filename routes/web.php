@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\TourismController;
  use App\Http\Controllers\MeetingController;
  use App\Http\Controllers\EventController;
+ use App\Http\Controllers\EvaluationController;
 
 
 
@@ -99,3 +100,11 @@ Route::post('admin/event/store',[eventController::class,'store'])->name('admin.e
 Route::get('admin/event/edit/{id}',[eventController::class,'edit'])->name('admin.event.edit');
 Route::post('admin/event/update/{id}',[eventController::class,'update'])->name('admin.event.update');
 Route::get('admin/event/delete/{id}',[eventController::class,'delete'])->name('admin.event.delete');
+
+
+Route::get('admin/evaluation/create',[EvaluationController::class,'create'])->name('admin.evaluation.create');
+Route::post('admin/evaluation/store',[EvaluationController::class,'store'])->name('admin.evaluation.store');
+Route::get('admin/evaluation/table',[EvaluationController::class,'table'])->name('admin.evaluation.table');
+Route::get('admin/evaluation/edit/{id}',[EvaluationController::class,'edit'])->name('admin.evaluation.edit');
+Route::post('admin/evaluation/update/{id}',[EvaluationController::class,'update'])->name('admin.evaluation.update');
+Route::get('admin/evaluation/delete/{id}',[EvaluationController::class,'delete'])->name('admin.evaluation.delete');

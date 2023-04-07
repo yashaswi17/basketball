@@ -276,6 +276,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{url('admin/evaluation/table')}}" class="nav-link">
+              <i class="nav-icon fas fa-laptop"></i>
+              <p>
+                Evaluation
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{route('logout')}}" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
               <p>
