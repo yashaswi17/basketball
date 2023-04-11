@@ -68,7 +68,8 @@
                 <td>{{$u->roles}}</td>
             <td>
                 <a href="{{route('admin.user.edit',$u->id)}}"> <button type="button" class="btn btn-info">Edit</button></a>
-               <a href="{{route('admin.user.delete',$u->id)}}"> <button type="button" class="btn btn-danger">Delete</button></a>
+                <a href="{{route('admin.user.delete',$u->id)}}"> <button type="button" class="btn btn-danger">Delete</button></a>
+                <a href="{{route('admin.user.attendance',$u->id)}}"> <button type="button" class="btn btn-primary">View Attendance</button></a>
             </td>
               </tr>
               @endforeach

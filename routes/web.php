@@ -71,6 +71,13 @@ Route::get('admin/user/edit/{id}',[UserController::class,'edit'])->name('admin.u
 Route::post('admin/user/update/{id}',[UserController::class,'update'])->name('admin.user.update');
 Route::get('admin/user/delete/{id}',[UserController::class,'destroy'])->name('admin.user.delete');
 
+// Route::get('attendance/{id}', 'ReportController@viewAttendanceReport')->name('attendance.view');
+Route::get('admin/user/attendance/{id}',[USerController::class,'viewAttendanceReport'])->name('admin.user.attendance');
+
+// attendance
+// Route::get('profile/attendance/{id}',[UserController::class,'userattendance'])->name('profile.attendance');
+
+
 // LeagueController
 Route::get('admin/league/create',[LeagueController::class,'create'])->name('admin.league.create');
 Route::post('admin/league/store',[LeagueController::class,'store'])->name('admin.league.store');
@@ -108,3 +115,6 @@ Route::get('admin/evaluation/table',[EvaluationController::class,'table'])->name
 Route::get('admin/evaluation/edit/{id}',[EvaluationController::class,'edit'])->name('admin.evaluation.edit');
 Route::post('admin/evaluation/update/{id}',[EvaluationController::class,'update'])->name('admin.evaluation.update');
 Route::get('admin/evaluation/delete/{id}',[EvaluationController::class,'delete'])->name('admin.evaluation.delete');
+
+
+

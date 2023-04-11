@@ -79,6 +79,8 @@
                                     <select class="form-control" name="roles">
                                         <option value="1">Admin</option>
                                         <option value="0">User</option>
+                                        <option value="2">Coach</option>
+
                                     </select>
                                 <!-- </div> -->
                             </div>
